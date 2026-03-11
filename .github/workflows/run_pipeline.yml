@@ -1,0 +1,29 @@
+name: Supply Chain Early Warning — Daily Run
+
+on:
+  schedule:
+    - cron: '0 6 * * *'   # Every day at 06:00 UTC (11:30am India)
+  workflow_dispatch:        # Also allows manual trigger from GitHub UI
+
+jobs:
+  run-pipeline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Install dependencies
+        run: pip install requests pandas numpy matplotlib seaborn gspread google-auth
+
+      - name: Run pipeline
+        env:
+          GOOGLE_CREDENTIALS_JSON: ${{ secrets.GOOGLE_CREDENTIALS_JSON }}
+          ALERT_EMAIL: ${{ secrets.ALERT_EMAIL }}
+          GMAIL_APP_PASSWORD: ${{ secrets.GMAIL_APP_PASSWORD }}
+        run: python pipeline.py
