@@ -67,6 +67,15 @@ Equivalent to 29.6 days of revenue at risk
 - **Gmail alerts** — sends an automatic email when any route hits CRITICAL
 - **24-hour loop** — pipeline reruns continuously without manual trigger
 
+
+-- **Financial Exposure**
+
+![Financial_exposure](Output_Financial_exposure_report.png)
+
+-- **Stock Cover Analysis**
+
+![Stock_cover_analysis](Output_Stock_cover_analysis.png)
+
 ---
 
 ## Tech Stack
@@ -95,7 +104,16 @@ Supply-Chain-Early-Warning/
 
 - Identified **£25.2M** in financial exposure across 4 trade routes
 - Flagged **Electronics** as highest-risk category (4–5 days to stockout on Red Sea disruption)
+
+
+-- **Dashboard**
+
+![Dashboard](Visualisation.png)
+
+
+
 - System runs fully automated — zero manual steps after setup
+
 
 ---
 
