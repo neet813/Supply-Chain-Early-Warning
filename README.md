@@ -1,4 +1,4 @@
-# Supply Chain Early Warning System 🚨
+# Supply Chain Early Warning System 
 
 An automated, data-driven risk monitoring tool that detects supply chain disruptions **before they cause stockouts** — quantifying financial exposure in £ across global trade routes.
 
@@ -31,10 +31,10 @@ Risk = (Conflict × 0.30) + (Shipping Cost × 0.25) + (Climate × 0.20) + (Trade
 
 | Score | Level |
 |---|---|
-| ≥ 75 | 🔴 CRITICAL |
-| ≥ 55 | 🟠 HIGH |
-| ≥ 35 | 🟡 MEDIUM |
-| < 35 | 🟢 LOW |
+| ≥ 75 |  CRITICAL |
+| ≥ 55 |  HIGH |
+| ≥ 35 |  MEDIUM |
+| < 35 |  LOW |
 
 ---
 
@@ -55,8 +55,8 @@ Risk = (Conflict × 0.30) + (Shipping Cost × 0.25) + (Climate × 0.20) + (Trade
 🟠 HIGH     — Europe-Asia Trade Policy: 73.4
 🟠 HIGH     — Americas-Europe Panama:   59.9
 
-💷 TOTAL COMPANY EXPOSURE: £25,200,000
-📅 Equivalent to 29.6 days of revenue at risk
+TOTAL COMPANY EXPOSURE: £25,200,000
+Equivalent to 29.6 days of revenue at risk
 ```
 
 ---
