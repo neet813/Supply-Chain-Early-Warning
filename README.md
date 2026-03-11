@@ -50,6 +50,35 @@ No manual steps. No Colab open. Runs on GitHub Actions on a schedule.
 ```
 Risk = (Conflict × 0.30) + (Shipping Cost × 0.25) + (Climate × 0.20) + (Trade Policy × 0.15) + (Port Delay × 0.10)
 ```
+-
+
+
+---
+
+
+## Developer’s Logic Log: The "Why" Behind the Build
+
+I built this tool to move from Reactive to Anticipatory operations. In Supply Chain, waiting for a "Late" notification is already too late. Here are the core logic decisions I made:
+
+**Dynamic Weighting (Why 30% and 25%?)** : I prioritized factors based on Velocity of Impact.
+
+Conflict (30%) is the highest weight because it causes "Instant-Zero" capacity. Unlike weather, there is no "5-day forecast" for a kinetic event on a shipping lane.
+
+Shipping Costs/BDI (25%) serves as a Live Proxy. Since historical data for "future disruptions" doesn't exist, I use live market spikes as a "canary in the coal mine"—if the price to ship is spiking now, it's a lead indicator that physical delays will follow in 7–10 days.
+
+**Financial Exposure (£)** : I chose to turn abstract risk scores into a currency value. While the risk signals are global, the Impact is Local. The formula uses a company's specific daily revenue and inventory levels (which are easily swappable) to calculate "Days of Cover." This moves the conversation from "The Red Sea is risky" to "We have 4 days to act before we lose £3.9M in Electronics."
+
+**Architectural Efficiency (GitHub Actions)** : I chose GitHub Actions to create a Production-Grade Pipeline for $0.
+
+By using a "Headless" automation, the system monitors global APIs 24/7 without needing a local server or a paid cloud subscription.
+
+I used Google Sheets as a "Live Data Warehouse" to preserve history, allowing for future trend analysis and easy connection to BI tools like Tableau or Power BI.
+
+
+
+---
+
+
 
 Weights reflect real-world supply chain thinking:
 - **Conflict (30%)** — highest weight because geopolitical events cause the longest, least predictable disruptions
