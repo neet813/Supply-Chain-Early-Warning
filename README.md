@@ -72,6 +72,8 @@ Equivalent to 29.6 days of revenue at risk
 
 ![Financial_exposure](Output_Financial_exposure_report.png)
 
+
+
 -- **Stock Cover Analysis**
 
 ![Stock_cover_analysis](Output_Stock_cover_analysis.png)
