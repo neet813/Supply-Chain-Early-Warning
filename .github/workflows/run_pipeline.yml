@@ -2,8 +2,8 @@ name: Supply Chain Early Warning — Daily Run
 
 on:
   schedule:
-    - cron: '0 6 * * *'   # Every day at 06:00 UTC (11:30am India)
-  workflow_dispatch:        # Also allows manual trigger from GitHub UI
+    - cron: '0 6 * * *'
+  workflow_dispatch:
 
 jobs:
   run-pipeline:
@@ -11,10 +11,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: '3.11'
 
