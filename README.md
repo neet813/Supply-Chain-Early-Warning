@@ -103,7 +103,12 @@ Weights reflect real-world supply chain thinking:
 
 
 
+
 ```
+
+## Sample Output (11 March 2026)
+
+
 🔴 CRITICAL — Asia-Europe Red Sea:      79.4
 🟠 HIGH     — Asia-Europe Suez:         74.9
 🟠 HIGH     — Europe-Asia Trade Policy: 73.4
